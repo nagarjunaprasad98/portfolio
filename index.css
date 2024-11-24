@@ -2,11 +2,10 @@ html,
 body {
     height: 100%;
     margin: 0;
-}
-
-body {
-    background: radial-gradient(circle at 30% 30%, #444a53 0%, #2c2f36 60%, #1a1c20 100%);
-    background-size: cover;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    /* Adjust this to the height of your navbar */
+    background: #292929 !important;
 }
 
 nav {
@@ -43,13 +42,33 @@ nav .navbar-brand {
     color: #fff;
 }
 
+/* Default styling for nav items */
+.navbar-nav .nav-link {
+    color: white;
+    /* Text color */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background */
+}
+
+/* Active nav item styling */
+.navbar-nav .nav-item.active .nav-link {
+    color: #ff5d56;
+}
+
+/* Hover effect for nav items */
+.navbar-nav .nav-link:hover {
+    color: #f0f0f0;
+    /* Light gray hover effect */
+}
+
+
 .color {
     color: #ff5d56;
 }
 
 .title {
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
+    font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    font-weight: bolder;
     transition: all 0.3s;
     color: #fff;
     margin: 0;
@@ -59,7 +78,12 @@ nav .navbar-brand {
 .jumbotron {
     background-color: #070707 !important;
     border-radius: 30px !important;
-    margin: 10px;
+    margin: 20px 10px 10px 10px;
+}
+
+.body-content {
+    position: relative;
+    top: 15%;
 }
 
 .jumbotron .container h2 {
@@ -160,44 +184,160 @@ nav .navbar-brand {
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .typing h3 {
-        font-size: 2.5rem; /* Slightly smaller font on tablets and larger screens */
+        font-size: 2.5rem;
+        /* Slightly smaller font on tablets and larger screens */
     }
 
     .jumbotron .summary {
-        font-size: 16px; /* Adjust font size for summary */
+        font-size: 16px;
+        /* Adjust font size for summary */
     }
 
     .btn {
-        padding: 8px 16px; /* Smaller padding for medium-sized screens */
+        padding: 8px 16px;
+        /* Smaller padding for medium-sized screens */
     }
 }
 
 @media (max-width: 768px) {
     .typing h3 {
-        font-size: 2rem; /* Smaller font size on tablets */
+        font-size: 2rem;
+        /* Smaller font size on tablets */
     }
 
     .jumbotron .summary {
-        font-size: 15px; /* Adjust font size for smaller screens */
+        font-size: 15px;
+        /* Adjust font size for smaller screens */
     }
 
     .btn {
-        padding: 8px 16px; /* Adjust padding for buttons on tablets */
-        font-size: 14px; /* Make button text smaller on tablets */
+        padding: 8px 16px;
+        /* Adjust padding for buttons on tablets */
+        font-size: 14px;
+        /* Make button text smaller on tablets */
     }
 }
 
 @media (max-width: 576px) {
     .typing h3 {
-        font-size: 1.5rem; /* Smaller font size on mobile devices */
+        font-size: 1.2rem;
+        /* Smaller font size for mobile */
+        letter-spacing: 3px;
+        /* Reduce spacing for mobile */
+        animation: typing 3s steps(24, end) infinite alternate, blink 0.8s step-end infinite;
     }
 
     .jumbotron .summary {
-        font-size: 14px; /* Smaller summary text for mobile */
+        font-size: 14px;
+        /* Smaller summary text for mobile */
     }
 
     .btn {
-        padding: 8px 14px; /* Adjust padding for small mobile screens */
-        font-size: 14px; /* Button text smaller for mobile */
+        padding: 8px 14px;
+        /* Adjust padding for small mobile screens */
+        font-size: 14px;
+        /* Button text smaller for mobile */
     }
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* Media Query for Extra Small Screens */
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/* Styling for the name */
+.about .name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    padding-bottom: 10px;
+    /* Adds space below the text */
+}
+
+.about .name::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 15%;
+    height: 5px;
+    /* Height of the line */
+    background-color: #ff5d56;
+    /* Line color */
+}
+
+.info-item i {
+    color: #ff5d56 !important;
+}
+
+
+/* Styling for the description */
+.about .description {
+    font-size: 1.1rem;
+    color: #8c8c8c;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Row styling for date of birth and nationality */
+.about .row {
+    margin-bottom: 20px;
+}
+
+/* Info item for Date of Birth and Nationality */
+.about .info-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #8c8c8c;
+}
+
+.about .info-item i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #555;
+}
+
+.about .info-text {
+    font-size: 1rem;
+}
+
+/* Responsive styling for larger screens */
+@media (min-width: 768px) {
+    .about.col-md-6 {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.footer {
+    color: aliceblue;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9) !important;
+    text-align: center;
+    opacity: 0.7;
+    padding: 10px 0;
+}
+
+.contact-details i {
+    color: #ff5d56;
+}
+
+.contact-details {
+    color: #fff;
 }

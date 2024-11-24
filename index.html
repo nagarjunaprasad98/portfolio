@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -18,7 +26,7 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <a class="navbar-brand" href="#">
         <h2 class="title">
           <span class="color">Doniparthi</span> Nagarjuna Prasad
@@ -41,49 +49,304 @@
       >
         <ul class="navbar-nav nav-l-items">
           <li class="nav-item active">
-            <a class="nav-link" href="#">HOME </a>
+            <a class="nav-link" href="#home" data-target="home">HOME </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ABOUT</a>
+            <a class="nav-link" href="#about">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">SERVICES</a>
+            <a class="nav-link" href="#services">SERVICES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">PORTFOLIO</a>
+            <a class="nav-link" href="#portfolio">PORTFOLIO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">BLOG</a>
+            <a class="nav-link" href="#blog">BLOG</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">CONTACT</a>
+            <a class="nav-link" href="#contact">CONTACT</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h2>Hi There! I'm</h2>
-        <div class="typing">
-          <h3 class="text-uppercase">Frontend Developer</h3>
+    <div class="body-content">
+      <div id="home" class="jumbotron jumbotron-fluid body-content">
+        <div class="container">
+          <h2>Hi There! I'm</h2>
+          <div class="typing">
+            <h3 class="text-uppercase">Frontend Developer</h3>
+          </div>
+          <div class="summary">
+            Passionate and innovative Front-End Developer with expertise in
+            creating responsive, user-centric web applications using modern
+            technologies like React, JavaScript, HTML, CSS, and UI/UX principles
+            to deliver seamless digital experiences.
+          </div>
+          <button
+            type="button"
+            class="btn"
+            id="downloadButton"
+            onclick="openPDF()"
+          >
+            Open CV
+          </button>
         </div>
-        <div class="summary">
-          Passionate and innovative Front-End Developer with expertise in
-          creating responsive, user-centric web applications using modern
-          technologies like React, JavaScript, HTML, CSS, and UI/UX principles
-          to deliver seamless digital experiences.
+      </div>
+
+      <div id="about" class="about jumbotron jumbotron-fluid body-content">
+        <div class="container">
+          <h1
+            style="
+              text-align: center;
+              font-family: Google Sans, Roboto, Arial, sans-serif;
+            "
+            class="color"
+          >
+            About Me
+          </h1>
+          <div class="container">
+            <!-- First Row: Name -->
+            <div class="row">
+              <div class="col-12">
+                <h1 class="name">Doniparthi Nagarjuna Prasad</h1>
+              </div>
+            </div>
+
+            <!-- Second Row: Description -->
+            <div class="row">
+              <div class="col-12">
+                <p class="description">
+                  As a **Front-End Developer**, I specialize in creating
+                  visually appealing and responsive web applications using
+                  modern technologies like
+                  <i
+                    class="fab fa-html5"
+                    style="font-size: 1.5rem; vertical-align: middle"
+                  ></i>
+                  **HTML**,
+                  <i
+                    class="fab fa-css3-alt"
+                    style="font-size: 1.5rem; vertical-align: middle"
+                  ></i>
+                  **CSS**,
+                  <i
+                    class="fab fa-js-square"
+                    style="font-size: 1.5rem; vertical-align: middle"
+                  ></i>
+                  **JavaScript**, and
+                  <i
+                    class="fab fa-react"
+                    style="font-size: 1.5rem; vertical-align: middle"
+                  ></i>
+                  **React**. My focus is on building seamless and intuitive user
+                  interfaces that deliver an exceptional experience across
+                  various devices and screen sizes. I use responsive design
+                  principles, including media queries,
+                  <i
+                    class="fas fa-box"
+                    style="font-size: 1.5rem; vertical-align: middle"
+                  ></i>
+                  **Flexbox**, and
+                  <i
+                    class="fas fa-th"
+                    style="font-size: 1.5rem; vertical-align: middle"
+                  ></i>
+                  **CSS Grid**, to ensure websites are both functional and
+                  aesthetically pleasing, adapting smoothly across mobile phones
+                  to large desktop screens.
+                </p>
+                <p class="description">
+                  With my expertise in
+                  <i
+                    class="fab fa-js-square"
+                    style="font-size: 1.5rem; vertical-align: middle"
+                  ></i>
+                  **JavaScript** and
+                  <i
+                    class="fab fa-react"
+                    style="font-size: 1.5rem; vertical-align: middle"
+                  ></i>
+                  **React**, I develop dynamic, interactive features while
+                  maintaining performance and scalability. I'm experienced in
+                  using component-based architecture and state management tools
+                  like
+                  <i
+                    class="fab fa-redux"
+                    style="font-size: 1.5rem; vertical-align: middle"
+                  ></i>
+                  **Redux** and
+                  <i
+                    class="fas fa-cogs"
+                    style="font-size: 1.5rem; vertical-align: middle"
+                  ></i>
+                  **Context API** to build scalable applications that are easy
+                  to maintain. I stay updated with the latest web development
+                  trends, focusing on accessibility,
+                  <i
+                    class="fas fa-search"
+                    style="font-size: 1.5rem; vertical-align: middle"
+                  ></i>
+                  **SEO**, and
+                  <i
+                    class="fas fa-tachometer-alt"
+                    style="font-size: 1.5rem; vertical-align: middle"
+                  ></i>
+                  **performance optimization** to deliver high-quality,
+                  cross-browser compatible websites that provide users with
+                  smooth, responsive experiences.
+                </p>
+              </div>
+            </div>
+
+            <!-- Third Row: Date of Birth and Nationality -->
+
+            <div class="row">
+              <!-- Phone -->
+              <div class="col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-telephone"></i>
+                  <span class="info-text">Phone: +91 9490440171</span>
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div class="col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <span class="info-text">Address: Andhra, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Email -->
+              <div class="col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-envelope"></i>
+                  <span class="info-text">Email: nagarjua671998@gmail.com</span>
+                </div>
+              </div>
+
+              <!-- Spoken Languages -->
+              <div class="col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-globe"></i>
+                  <span class="info-text"
+                    >Spoken Languages: Telugu, Hindi, English</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- LinkedIn -->
+              <div class="col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-linkedin"></i>
+                  <span class="info-text">
+                    <a
+                      href="https://www.linkedin.com/in/nagarjuna-prasad-doniparthi-04786027b/"
+                      target="_blank"
+                      >LinkedIn</a
+                    ></span
+                  >
+                </div>
+              </div>
+
+              <!-- GitHub -->
+              <div class="col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-github"></i>
+                  <span class="info-text">
+                    <a
+                      href="https://github.com/nagarjunaprasad98"
+                      target="_blank"
+                      >GitHub</a
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <button
-          type="button"
-          class="btn"
-          id="downloadButton"
-          onclick="openPDF()"
-        >
-          Open CV
-        </button>
+      </div>
+
+      <div id="services" class="jumbotron jumbotron-fluid body-content">
+        <div class="container">
+          <h2>Services</h2>
+          <p>This is the Services section.</p>
+        </div>
+      </div>
+      <div id="portfolio" class="jumbotron jumbotron-fluid body-content">
+        <div class="container">
+          <h2>portfolio</h2>
+          <p>This is the portfolio section.</p>
+        </div>
+      </div>
+      <div id="blog" class="jumbotron jumbotron-fluid body-content">
+        <div class="container">
+          <h2>blog</h2>
+          <p>This is the blog section.</p>
+        </div>
+      </div>
+
+      <div id="contact" class="jumbotron jumbotron-fluid body-content">
+        <div class="container">
+          <h2 style="text-align: center"> Contact Info</h2>
+          <div class="contact-details row" style="text-align: center">
+            <!-- Phone -->
+            <div class="col">
+              <i
+                class="fas fa-phone-alt"
+                style="font-size: 1.5rem; vertical-align: middle"
+              ></i>
+              <p>Phone: +91 9490440171</p>
+            </div>
+
+            <!-- Address -->
+            <div class="col">
+              <i
+                class="fas fa-map-marker-alt"
+                style="font-size: 1.5rem; vertical-align: middle"
+              ></i>
+              <p>Andhra, India</p>
+            </div>
+
+            <!-- Email -->
+            <div class="col">
+              <i
+                class="fas fa-envelope"
+                style="font-size: 1.5rem; vertical-align: middle"
+              ></i>
+              <p>Email: nagarjua671998@gmail.com</p>
+            </div>
+
+            <!-- Spoken Languages -->
+            <div class="col">
+              <i
+                class="fas fa-language"
+                style="font-size: 1.5rem; vertical-align: middle"
+              ></i>
+              <p>Spoken Languages: Telugu, Hindi, English</p>
+            </div>
+
+            <!-- Skype -->
+            <div class="col">
+              <i
+                class="fab fa-skype"
+                style="font-size: 1.5rem; vertical-align: middle"
+              ></i>
+              <p>Skype: nagarjuna prasad</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <footer class="footer">
+      &copy; 2024 Doniparthi Nagarjuna Prasad. All Rights Reserved.
+    </footer>
 
     <script src="index.js"></script>
   </body>
