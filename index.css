@@ -1,0 +1,203 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: radial-gradient(circle at 30% 30%, #444a53 0%, #2c2f36 60%, #1a1c20 100%);
+    background-size: cover;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.9) !important;
+}
+
+.navbar {
+    padding: 0.2rem 2rem;
+}
+
+nav .navbar-brand {
+    color: #fff;
+}
+
+.nav-l-items {
+    font-family: 'Roboto', sans-serif;
+    padding: 4px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: all 0.3s;
+    color: #fff;
+}
+
+.nav-l-items li {
+    padding: 10px 6px 10px;
+    color: #fff;
+}
+
+.navbar-nav>li>a {
+    color: #fff;
+}
+
+.color {
+    color: #ff5d56;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    transition: all 0.3s;
+    color: #fff;
+    margin: 0;
+    font-size: 1.2 rem;
+}
+
+.jumbotron {
+    background-color: #070707 !important;
+    border-radius: 30px !important;
+    margin: 10px;
+}
+
+.jumbotron .container h2 {
+    color: #aeadad;
+}
+
+.jumbotron .summary {
+    margin-top: 7%;
+    color: #c3c3c3;
+    font-size: 17px;
+}
+
+
+.typing {
+    position: relative;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #3333);
+}
+
+.typing h3 {
+    position: relative;
+    color: #fff;
+    letter-spacing: 5px;
+    font-size: 3rem;
+    overflow: hidden;
+    margin-bottom: 0;
+    white-space: nowrap;
+    /* Prevents wrapping */
+    border-right: 2px solid #fff;
+    /* Simulates the cursor */
+    animation: typing 3s steps(30, end) infinite alternate, blink 2s step-end infinite;
+}
+
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+        /* Start from 0 width */
+    }
+
+    to {
+        width: 24ch;
+        /* Match the exact number of characters in your text */
+    }
+}
+
+/* Cursor blinking effect */
+@keyframes blink {
+    50% {
+        border-right-color: transparent;
+        /* Cursor blinks */
+    }
+
+    100% {
+        border-right-color: #fff;
+    }
+}
+
+/* Default outline button style */
+.btn {
+    border: 2px solid #fff !important;
+    color: #fff !important;
+    /* Text color same as border */
+    background-color: transparent;
+    margin: 15px 0px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Smooth transition for hover and active states */
+}
+
+/* Hover effect */
+.btn:hover {
+    border-color: #ff5d56 !important;
+    color: #ff5d56 !important;
+    background-color: transparent;
+}
+
+/* Active state when clicked */
+.btn:active {
+    background-color: #ff5d56 !important;
+    /* Button background color on click */
+    color: white !important;
+    /* Text color on click */
+    border-color: #ff5d56 !important;
+    /* Border color when clicked */
+}
+
+/* Focus state (optional) to remove outline from button */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 93, 86, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .typing h3 {
+        font-size: 2.5rem; /* Slightly smaller font on tablets and larger screens */
+    }
+
+    .jumbotron .summary {
+        font-size: 16px; /* Adjust font size for summary */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Smaller padding for medium-sized screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .typing h3 {
+        font-size: 2rem; /* Smaller font size on tablets */
+    }
+
+    .jumbotron .summary {
+        font-size: 15px; /* Adjust font size for smaller screens */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Adjust padding for buttons on tablets */
+        font-size: 14px; /* Make button text smaller on tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .typing h3 {
+        font-size: 1.5rem; /* Smaller font size on mobile devices */
+    }
+
+    .jumbotron .summary {
+        font-size: 14px; /* Smaller summary text for mobile */
+    }
+
+    .btn {
+        padding: 8px 14px; /* Adjust padding for small mobile screens */
+        font-size: 14px; /* Button text smaller for mobile */
+    }
+}
